@@ -1,29 +1,34 @@
 [
     {
-        "name": "Post valido",
+        "name": "Post_valido_1",
         "endpoint": "/posts/1",
         "expected_status": 200,
-        "expected_keys": ["userId", "id", "title", "body"]
+        "expected_keys": ["userId", "id", "title", "body"],
+        "max_response_time": 500
     },
     {
-        "name": "Post invalido (9999)",
+        "name": "Post_invalido_9999",
         "endpoint": "/posts/9999",
-        "expected_status": 404
+        "expected_status": 404,
+        "max_response_time": 500
     },
     {
-        "name": "Post invalido (-1)",
+        "name": "Post_invalido_-1",
         "endpoint": "/posts/-1",
-        "expected_status": 404
+        "expected_status": 404,
+        "max_response_time": 500
     },
     {
-        "name": "Post invalido (abc)",
+        "name": "Post_invalido_abc",
         "endpoint": "/posts/abc",
-        "expected_status": 404
+        "expected_status": 404,
+        "max_response_time": 500
     },
     {
-        "name": "Post valido (5)",
+        "name": "Post_valido_5",
         "endpoint": "/posts/5",
         "expected_status": 200,
-        "expected_keys": ["userId", "id", "title", "body"]
+        "expected_keys": ["userId", "id", "title", "body"],
+        "max_response_time": 500
     }
 ]
