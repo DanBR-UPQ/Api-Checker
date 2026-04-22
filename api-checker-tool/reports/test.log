@@ -1,0 +1,10 @@
+2026-04-21 21:51:34,592 - INFO - Sending GET request to https://jsonplaceholder.typicode.com/posts/1
+2026-04-21 21:51:34,679 - INFO - Received status: 200
+2026-04-21 21:51:34,691 - INFO - Sending GET request to https://jsonplaceholder.typicode.com/posts/9999
+2026-04-21 21:51:34,750 - INFO - Received status: 404
+2026-04-21 21:51:34,754 - INFO - Sending GET request to https://jsonplaceholder.typicode.com/posts/-1
+2026-04-21 21:51:34,804 - INFO - Received status: 404
+2026-04-21 21:51:34,807 - INFO - Sending GET request to https://jsonplaceholder.typicode.com/posts/abc
+2026-04-21 21:51:34,855 - INFO - Received status: 404
+2026-04-21 21:51:34,859 - INFO - Sending GET request to https://jsonplaceholder.typicode.com/posts/5
+2026-04-21 21:51:34,966 - INFO - Received status: 200
