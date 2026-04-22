@@ -6,8 +6,24 @@
         "expected_keys": ["userId", "id", "title", "body"]
     },
     {
-        "name": "Post invalido",
+        "name": "Post invalido (9999)",
         "endpoint": "/posts/9999",
         "expected_status": 404
+    },
+    {
+        "name": "Post invalido (-1)",
+        "endpoint": "/posts/-1",
+        "expected_status": 404
+    },
+    {
+        "name": "Post invalido (abc)",
+        "endpoint": "/posts/abc",
+        "expected_status": 404
+    },
+    {
+        "name": "Post valido (5)",
+        "endpoint": "/posts/5",
+        "expected_status": 200,
+        "expected_keys": ["userId", "id", "title", "body"]
     }
 ]
