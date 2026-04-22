@@ -1,0 +1,20 @@
+import json
+import pytest
+
+from utils.client import send_get
+from utils.validators import validate_status_code, validate_keys
+
+with open("config/test_cases.json") as f:
+    test_cases = json.load(f)
+
+
+
+@pytest.mark.parametrize("case", test_cases, ids=[c["name"] for c in test_cases])
+def test_api_cases(case):
+    response = send_get(case["endpoint"])
+
+    assert validate_status_code(response, case["expected_status"])
+
+    if "expected_keys" in case:
+        data = response.json()
+        assert validate_keys(data, case["expected_keys"])

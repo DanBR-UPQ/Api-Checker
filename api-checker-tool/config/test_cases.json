@@ -1,0 +1,13 @@
+[
+    {
+        "name": "Post valido",
+        "endpoint": "/posts/1",
+        "expected_status": 200,
+        "expected_keys": ["userId", "id", "title", "body"]
+    },
+    {
+        "name": "Post invalido",
+        "endpoint": "/posts/9999",
+        "expected_status": 404
+    }
+]
